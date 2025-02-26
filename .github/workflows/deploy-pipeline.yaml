@@ -55,8 +55,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Corrected capitalization
         with:
-          # tag_name: ${{ github.run_number }}
-          tag_name: release-${{ github.run_number }} # to skip error of re-release
+          tag_name: ${{ github.run_number }}
+          #tag_name: release-${{ github.run_number }} # to skip error of re-release
           release_name: Release ${{ github.run_number }}
           body: New release for ${{ github.sha }}. Release notes can be found in the docs.
           draft: false
